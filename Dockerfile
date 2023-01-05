@@ -1,7 +1,5 @@
 ARG METABASE_VERSION=0.45.1
 
-FROM metabase/metabase:v${METABASE_VERSION} AS metabase_baseimage
-
 FROM --platform=${BUILDPLATFORM} ubuntu
 
 LABEL maintainer="adrianoamalfi"
@@ -34,7 +32,7 @@ RUN rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
 WORKDIR /app
 
 # copy app from the offical image
-COPY --from=metabase_baseimage /app /app
+COPY --from=metabase/metabase:v0.45.1 /app /app
 
 RUN chown -R metabase /app
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "docker buildx build -t \"metabase:latest\" --platform linux/amd64,linux/arm64,linux/arm/v7 --target builder .",
-    "local-build": "docker buildx build -t \"metabase:latest\" --platform linux/amd64,linux/arm64,linux/arm/v7 .",
+    "local-build": "docker buildx build -t \"metabase:latest\" --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm64/v8 .",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi"
   },
   "repository": {

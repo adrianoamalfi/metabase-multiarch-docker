@@ -1,0 +1,21 @@
+{
+  "name": "metabase-multiarch-docker",
+  "version": "0.45.1",
+  "description": "Universal Docker images for Metabase an easy, open-source way for everyone to ask questions and learn from data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "docker buildx build -t \"metabase:latest\" --platform linux/amd64,linux/arm64,linux/arm/v7 --target builder .",
+    "local-build": "docker buildx build -t \"metabase:latest\" --platform linux/amd64,linux/arm64,linux/arm/v7 .",
+    "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianoamalfi/metabase-multiarch-docker.git"
+  },
+  "author": "Adriano Amalfi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianoamalfi/metabase-multiarch-docker/issues"
+  },
+  "homepage": "https://github.com/adrianoamalfi/metabase-multiarch-docker#readme"
+}

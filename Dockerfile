@@ -1,5 +1,3 @@
-ARG METABASE_VERSION=0.45.1
-
 FROM --platform=${BUILDPLATFORM} ubuntu
 
 LABEL maintainer="adrianoamalfi"
@@ -11,8 +9,6 @@ LABEL org.opencontainers.image.source "https://raw.githubusercontent.com/adriano
 LABEL org.opencontainers.image.version "v0.45.1"
 LABEL org.opencontainers.image.base.name "node:lts-alpine"
 LABEL org.opencontainers.image.licenses "MIT"
-
-
 
 ENV FC_LANG en-US LC_CTYPE en_US.UTF-8
 

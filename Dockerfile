@@ -28,7 +28,7 @@ RUN rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
 WORKDIR /app
 
 # copy app from the offical image
-COPY --from=metabase/metabase:v0.46.0 /app /app
+COPY --from=metabase/metabase:v0.46.2 /app /app
 
 RUN chown -R metabase /app
 

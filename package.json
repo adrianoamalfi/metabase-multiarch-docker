@@ -1,6 +1,6 @@
 {
   "name": "metabase-multiarch-docker",
-  "version": "0.46.3",
+  "version": "0.46.4",
   "description": "Universal Docker images for Metabase an easy, open-source way for everyone to ask questions and learn from data.",
   "main": "index.js",
   "scripts": {

@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.description "Universal Docker images for Metabase
 LABEL org.opencontainers.image.url "https://github.com/adrianoamalfi/metabase-multiarch-docker"
 LABEL org.opencontainers.image.documentation "https://raw.githubusercontent.com/adrianoamalfi/metabase-multiarch-docker/main/README.md"
 LABEL org.opencontainers.image.source "https://raw.githubusercontent.com/adrianoamalfi/metabase-multiarch-docker/main/Dockerfile"
-LABEL org.opencontainers.image.version "v0.46.0"
+LABEL org.opencontainers.image.version "v0.48.2"
 LABEL org.opencontainers.image.base.name "node:lts-alpine"
 LABEL org.opencontainers.image.licenses "MIT"
 
@@ -28,7 +28,7 @@ RUN rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
 WORKDIR /app
 
 # copy app from the offical image
-COPY --from=metabase/metabase:v0.46.4 /app /app
+COPY --from=metabase/metabase:v0.48.2 /app /app
 
 RUN chown -R metabase /app
 
